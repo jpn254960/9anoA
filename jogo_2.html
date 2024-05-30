@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    body{
+        margin: 1vh;
+        background-color: rgb(15, 15, 15);
+        border: none;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 250;
+        font-style: normal;
+        font-variation-settings:
+        "slnt" 0;
+    }
+    #numeros{
+        margin: auto;
+        text-align: center;
+        color: antiquewhite;
+        margin-top: 10vh;
+        font-size: 10vh;
+        margin-bottom: 0px;
+    }
+    #repostas{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .r{
+        height: 5vh;
+        margin-top: 0px;
+        text-align: center;
+        border: 1vh white solid;
+        border-radius: 3vh;
+        color: antiquewhite;
+        font-size: 4vh;
+    }
+    .r:hover{
+        border: 1vh red solid;
+    }
+    #time{
+        color: antiquewhite;
+        display: flex;
+        flex-direction: row;
+    }
+    #t,#pontos{
+        margin: auto;
+        margin-left:0.1vw;
+        margin-right: 30vw;
+        font-size: 4vh;
+    }
+</style>
+<body>
+    <section id="time">
+        <h1 id="pontos">Pontos: 0 </h1> <h1 id="t">0</h1>
+    </section>
+    <section id="numeros">
+        <h1 id="enunciado">2x2</h1>
+    </section>
+     <section id="respostas">
+        <h1 id="r1" class="r" onclick="teste(1)">1</h1>
+        <h1 id="r2" class="r" onclick="teste(2)">4</h1>
+        <h1 id="r3" class="r" onclick="teste(3)">4</h1>
+        <h1 id="r4" class="r" onclick="teste(4)">0</h1>
+    </section>
+</body>
+<script>
+
+    var enunciado=document.getElementById('enunciado')
+    var alternativas=[document.getElementById('r1'),document.getElementById('r2'),document.getElementById('r3'),document.getElementById('r4')]
+    var numero1=0
+    var numero2=0
+    var resultado=0
+    var sinais=['+','-','x','/']
+    var pontos= document.getElementById('pontos')
+    var ponto=0
+    var time=document.getElementById('t')
+    var t=0
+    var chave_começar=1
+    function começar(chaves){
+        if (chaves==1){   
+            var chave=0
+            numero1=sortear(1,9)
+            numero2=sortear(1,9)
+            var sinal=sinais[sortear(0,3)]
+            enunciado.innerText=`${numero1}${sinal}${numero2}`
+
+            // gerar respostas
+            if(sinal=='+'){resultado=numero1+numero2}
+            else if (sinal=='-'){resultado=numero1-numero2}
+            else if (sinal=='x'){resultado=numero1*numero2}
+            else if (sinal=='/'){resultado=numero1/numero2}
+            
+            //misturar as respostas
+            for (var s=0;s<=3;s++){
+                if(chave==0){
+                    if(sortear(0,3)==2 || s==3){
+                        chave=1
+                        alternativas[s].innerText=resultado
+                    }else{
+                        alternativas[s].innerText=sortear(0,81)
+                    }
+                }else{
+                    alternativas[s].innerText=sortear(0,81)
+                }
+
+            }
+        }
+    }
+    começar(chave_começar)
+    function teste(r){
+        if(alternativas[r-1].innerText==resultado){
+            ponto++
+            pontos.innerText=`Pontos: ${ponto}`
+        }else{
+            ponto-=4
+            pontos.innerText=`Pontos: ${ponto}`
+        }
+        começar(chave_começar)
+    }
+    function sortear(min,max){
+        var valor=Math.floor(Math.random() * (max-min + 1))+min
+        return valor
+    }
+
+    var sistema=setInterval(function (){
+        if(t==20){
+            clearInterval(sistema)
+            chave_começar=0
+            for(var c=0; c!=4; c++){
+                alternativas[c].onclick=''
+                alternativas[c].style.borderColor='transparent'
+                alternativas[c].innerText=''
+            }
+            // sistema de moeda
+            var bit=localStorage.getItem('bit')
+            var aposta=localStorage.getItem('aposta')
+            localStorage.setItem('bit',(aposta*(ponto/4)+Number(bit)))
+
+            setTimeout(function(){
+                 open('jogo.html','_self')
+             },5000)
+        }else{
+            t++
+        }
+        time.innerText=`${t}`
+    },1000)
+</script>
+</html>

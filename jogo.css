@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+    background-color: #0f0f0f;
+}
+/* parte 1 */
+#cima{
+    width: 100vw;
+    height: 9vh;
+    background-color:#191919 ;
+    display: flex;
+    flex-direction: row;
+    font-size: 3vh;
+    color: #AFAAAA;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+    margin-bottom:10vh;
+}
+#bit{
+    margin: auto;
+    border: 0.05vw #AFAAAA solid;
+    border-radius: 2vh;
+    
+}
+
+/* parte 3 */
+#baixo{
+    box-shadow: 0px 0px 10px black; 
+    width: 100vw;
+    height: 15vh;
+    background-color: #191919;
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    bottom: 0px;
+}
+.icon_b{
+    width:11vh ;
+    height: 10vh;
+    object-fit: cover;
+    margin: auto;
+}
+.icon_b:hover{
+    filter: grayscale(100%) sepia(100%) hue-rotate(295.5deg)
+    saturate(100%) opacity(100%);
+}
+#jogar{
+    margin-right: 10vh;
+}
+#mercado{
+    margin-left: 10vh;
+}
+
+/* parte 2 */
+.icon_c{
+    width: 40vh;
+    height: 15vh;
+    object-fit: cover;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom:  2vh;
+}
+#jogos{
+    display: flex;
+    flex-direction: column;
+    
+}
+#aposta{
+    text-align: center;
+    width: 10vh;
+    height: 4vh;
+    margin: auto;
+    margin-bottom: 1vw;
+    background-color:#060606;
+    border: 1vh #282828 solid;
+    color: #AFAAAA;
+    border-radius: 2vh;
+    font-size: 2vh;
+}
