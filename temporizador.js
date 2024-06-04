@@ -38,4 +38,4 @@ setInterval(function(){
     c++
     console.log(tempo)
   }
-},1000)
+},60000)
