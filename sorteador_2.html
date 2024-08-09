@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorteador</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    body{
+        background-color: #151716;
+        border: none;
+        margin: 0pc;
+        color: white;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+    #quadrado{   
+        width: 80vw;
+        height: 50vh;
+        margin: auto;
+        margin-top: 20vh;
+        text-align: center;
+        background-color: aqua;
+        text-align: center;
+    }
+    #contador{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1 id="contador">0</h1>
+    <section id="quadrado" onclick="ativar()">
+    <h1 id="texto"></h1>
+    </section>
+</body>
+<script>
+var cores=['red','blue','green','white']
+var nc=[0,0,0,0]
+var va=0
+function ativar () {
+    va++
+    document.getElementById('contador').innerText=`${va}`
+    var resultado=sor(0,cores.length)
+    document.getElementById('quadrado').style.backgroundColor=cores[resultado]
+    if(nc[resultado]!=2){
+        nc[resultado]++
+    }
+    if(nc[resultado]==2){
+        cores.splice(resultado,1)
+        nc.splice(resultado,1)    
+    }
+    
+    if (cores.length==0){
+        document.getElementById('quadrado').style.backgroundColor='#151716'
+        document.getElementById('texto').innerText='times já foram escolhido'
+    }
+    console.log(cores)
+    console.log(nc)
+
+}
+
+function sor(min,max){
+    min=Math.ceil(min)
+    max=Math.floor(max)
+    return Math.floor(Math.random()*(max-min))-min
+}
+</script>
+</html>
