@@ -20,54 +20,54 @@
         right: 1vw;
     }
     #imagem_central{
-        width: 70vw;
-        height: 70vw;
+        width: 55vw;
+        height: 55vw;
         object-fit: cover;
         position: absolute;
-        left: 15vw;
-        top: 12vh;
+        left: 20vw;
+        top: 8vh;
     }
     #titulo1_mobile_inicio{
         color:#ffefca;
-        font-size: 8vw;
+        font-size: 6vw;
         position: absolute;
-        top: 40vh;
-        left: 8vw;
+        top: 45vh;
+        left: 15vw;
     }
     #titulo2_mobile_inicio{
         color: white;
-        font-size: 8vw;
+        font-size: 6vw;
         position: absolute;
-        top: 44vh;
-        left: 8vw;
+        top: 50vh;
+        left: 15vw;
     }
     #substitulo1_mobile_inicio{
         color:#ffefca;
-        font-size: 6vw;
+        font-size: 4vw;
         position: absolute;
-        top: 56vh;
+        top: 60vh;
         left: 8vw;
 
     }
     #substitulo2_mobile_inicio{
         color:#ffefca;
-        font-size: 6vw;
+        font-size: 4vw;
         position: absolute;
-        top: 73vh;
+        top: 60vh;
         left: 48vw;
     }
     #projetos_mobile{
-        font-size: 4vw;
+        font-size: 3vw;
         color: white;
         position: absolute;
-        top: 60vh;
+        top: 64vh;
         left: 8vw;
     }
     #intuito_mobile{
-        font-size: 4vw;
+        font-size: 3vw;
         color: white;
         position: absolute;
-        top: 77vh;
+        top: 64vh;
         left: 48vw;
     }
 
