@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simulador</title>
+</head>
+<body>
+    <section id="computador">
+        <section id="parte_cima">
+            <h1 id="text_dias">dias</h1>
+            <input type="number" name="" id="dias" value="0">
+            <input type="button" value="iniciar" onclick="simular()">
+        </section>
+        <!-- situação boa -->
+        <section id="boa">
+            <h1>boa</h1>
+            <section id="saude">
+                <h1 id="text_saude">saude</h1>
+                <h1 id="por100_saudeb">100%</h1>
+            </section>
+        </section>
+        <!-- situação media-->
+        <section id="media">
+            <h1>media</h1>
+            <section id="saude">
+                <h1 id="text_saude">saude</h1>
+                <h1 id="por100_saudem">100%</h1>
+            </section>
+        </section>
+        <!-- situação ruim -->
+        <section id="ruim">
+            <h1>ruim</h1>
+            <section id="saude">
+                <h1 id="text_saude">saude</h1>
+                <h1 id="por100_sauder">100%</h1>
+            </section>
+        </section>
+    </section>
+</body>
+<script>
+    function simular(){
+        var dias= document.getElementById('dias').value
+        var v=[[document.getElementById('por100_saudeb'),document.getElementById('por100_saudem'),document.getElementById('por100_sauder')],[100,100,100],[1.05,0.93,0.85]]
+        for (c=0;c!=dias;c++){
+            for (s=0;s!=3;s++){
+                v[0][s].innerText=`${parseInt(v[1][s]*=v[2][s])}`
+            }
+        }
+    }
+</script>
+</html>

@@ -3,8 +3,74 @@
 @media (max-width: 1024px) {
     body {
         background-color: #4c7d59;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+    }
+    #computador{
+        display: none;
+        visibility:collapse;
+    }
+    #logo_cima{
+        width: 12vw;
+        height: 12vw;
+        position: absolute;
+        top: 2vh;
+        right: 1vw;
+    }
+    #imagem_central{
+        width: 70vw;
+        height: 70vw;
+        object-fit: cover;
+        position: absolute;
+        left: 15vw;
+        top: 12vh;
+    }
+    #titulo1_mobile_inicio{
+        color:#ffefca;
+        font-size: 8vw;
+        position: absolute;
+        top: 40vh;
+        left: 8vw;
+    }
+    #titulo2_mobile_inicio{
+        color: white;
+        font-size: 8vw;
+        position: absolute;
+        top: 44vh;
+        left: 8vw;
+    }
+    #substitulo1_mobile_inicio{
+        color:#ffefca;
+        font-size: 6vw;
+        position: absolute;
+        top: 56vh;
+        left: 8vw;
 
     }
+    #substitulo2_mobile_inicio{
+        color:#ffefca;
+        font-size: 6vw;
+        position: absolute;
+        top: 73vh;
+        left: 48vw;
+    }
+    #projetos_mobile{
+        font-size: 4vw;
+        color: white;
+        position: absolute;
+        top: 60vh;
+        left: 8vw;
+    }
+    #intuito_mobile{
+        font-size: 4vw;
+        color: white;
+        position: absolute;
+        top: 77vh;
+        left: 48vw;
+    }
+
   }
 
   /* Estilos para desktops */
@@ -18,7 +84,10 @@
         font-weight: 600;
         font-style: normal;
     }
-    
+    #mobile{
+        display: none;
+        visibility: collapse;
+    }
     /* parte de cima > feito */
     #barra_de_cima{
         display: flex;

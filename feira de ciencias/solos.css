@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: white;
+    border: none;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+#barra_de_cima{
+    display: flex;
+    flex-direction: row;
+    width: 99vw;
+    height: 6vh;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    color: black;
+}
+.guia{
+    text-align: center;
+    font-size: 1vw;
+    margin: auto;
+    color: black;
+}
+.guia:hover{
+    color: #008205;
+    text-decoration:underline;
+    transition: color 0.3s;
+}
+#logo{
+    margin-left: 70vw;
+
+}
+#fundo{
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    position: absolute;
+    top: 13vh;
+    left: 10vw;
+}
+#titulo1{
+    font-size: 3vw;
+    position: absolute;
+    top: 46vh;
+    left: 45vw;
+    color: #245a1e;
+}
+#subtitulo1{
+    font-size: 1.5vw;
+    position: absolute;
+    position: absolute;
+    top: 55vh;
+    left: 45vw;
+}
+#titulo2{
+    font-size: 3vw;
+    position: absolute;
+    top: 5vh;
+    left: 45vw;
+    color: #245a1e;
+}
+#subtitulo2{
+    font-size: 1.5vw;
+    position: absolute;
+    top: 15vh;
+    left: 45vw;
+}
