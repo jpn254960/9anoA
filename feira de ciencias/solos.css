@@ -1,72 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-    background-color: white;
-    border: none;
-    margin: 0px;
+
+*{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
-#barra_de_cima{
-    display: flex;
-    flex-direction: row;
-    width: 99vw;
-    height: 6vh;
-    background-color: white;
-    text-align: center;
-    margin: auto;
-    position: fixed;
-    top: 0px;
-    color: black;
-}
-.guia{
-    text-align: center;
-    font-size: 1vw;
-    margin: auto;
-    color: black;
-}
-.guia:hover{
-    color: #008205;
-    text-decoration:underline;
-    transition: color 0.3s;
-}
-#logo{
-    margin-left: 70vw;
+/* mobile */
+@media (max-width: 1024px){
+    body{
+        background-color:#4c7d59;
+        border: none;
+        margin: 0px;
+    }
+    #computador{
+        display: none;
+    }
+    #titulo2_mobile{
+        color: #ffefca;
+        font-size: 4vw;
+        position: absolute;
+        left: 10vw;
+        top: 47vh;
+    }
+    #subtitulo2_mobile{
+        color: white;
+        font-size: 3vw;
+        position: absolute;
+        left: 10vw;
+        top: 51vh;
+    }
+    #titulo1_mobile{
+        color: #ffefca;
+        font-size: 4vw;
+        position: absolute;
+        top: 12vh;
+        left: 10vw;
+    }
+    #subtitulo1_mobile{
+        color: white;
+        font-size: 3vw;
+        position: absolute;
+        top: 16vh;
+        left: 10vw;
+    }
+    #logo{
+        width: 12vw;
+        height: 12vw;
+
+    }
+    #cima{
+        display: flex;
+        flex-direction: row;
+        font-size: 3vw;
+        color: white;
+    }
+    .log,#logo_cima{
+        margin: auto;
+        color: white;
+        text-decoration: none;
+    }
+    .log:hover{
+        text-decoration:underline;
+    }
 
 }
-#fundo{
-    width: 30vw;
-    height: 30vw;
-    object-fit: cover;
-    position: absolute;
-    top: 13vh;
-    left: 10vw;
-}
-#titulo1{
-    font-size: 3vw;
-    position: absolute;
-    top: 46vh;
-    left: 45vw;
-    color: #245a1e;
-}
-#subtitulo1{
-    font-size: 1.5vw;
-    position: absolute;
-    position: absolute;
-    top: 55vh;
-    left: 45vw;
-}
-#titulo2{
-    font-size: 3vw;
-    position: absolute;
-    top: 5vh;
-    left: 45vw;
-    color: #245a1e;
-}
-#subtitulo2{
-    font-size: 1.5vw;
-    position: absolute;
-    top: 15vh;
-    left: 45vw;
+/* computador */
+@media (min-width: 1025px){
+    #mobile{
+        display: none;
+    }
+    body{
+        background-color: white;
+        border: none;
+        margin: 0px;
+    }
+    #barra_de_cima{
+        display: flex;
+        flex-direction: row;
+        width: 99vw;
+        height: 6vh;
+        background-color: white;
+        text-align: center;
+        margin: auto;
+        position: fixed;
+        top: 0px;
+        color: black;
+    }
+    .guia{
+        text-align: center;
+        font-size: 1vw;
+        margin: auto;
+        color: black;
+    }
+    .guia:hover{
+        color: #008205;
+        text-decoration:underline;
+        transition: color 0.3s;
+    }
+    #logo{
+        margin-left: 70vw;
+
+    }
+    #fundo{
+        width: 30vw;
+        height: 30vw;
+        object-fit: cover;
+        position: absolute;
+        top: 13vh;
+        left: 10vw;
+    }
+    #titulo1{
+        font-size: 3vw;
+        position: absolute;
+        top: 46vh;
+        left: 45vw;
+        color: #245a1e;
+    }
+    #subtitulo1{
+        font-size: 1.5vw;
+        position: absolute;
+        position: absolute;
+        top: 55vh;
+        left: 45vw;
+    }
+    #titulo2{
+        font-size: 3vw;
+        position: absolute;
+        top: 5vh;
+        left: 45vw;
+        color: #245a1e;
+    }
+    #subtitulo2{
+        font-size: 1.5vw;
+        position: absolute;
+        top: 15vh;
+        left: 45vw;
+    }
 }

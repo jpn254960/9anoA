@@ -7,6 +7,8 @@
         font-optical-sizing: auto;
         font-weight: 600;
         font-style: normal;
+        margin: 0px;
+        border: none;
     }
     #computador{
         display: none;
@@ -15,9 +17,6 @@
     #logo_cima{
         width: 12vw;
         height: 12vw;
-        position: absolute;
-        top: 2vh;
-        right: 1vw;
     }
     #imagem_central{
         width: 55vw;
@@ -70,7 +69,21 @@
         top: 64vh;
         left: 48vw;
     }
-
+    #cima{
+        display: flex;
+        flex-direction: row;
+        font-size: 3vw;
+        color: white;
+        margin: 0pc;
+    }
+    .log,#logo_cima{
+        margin: auto;
+        color: white;
+        text-decoration: none;
+    }
+    .log:hover{
+        text-decoration:underline;
+    }
   }
 
   /* Estilos para desktops */
