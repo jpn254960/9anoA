@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compostagem</title>
+    <link rel="stylesheet" href="compostagem.css">
+</head>
+<body>
+    <section id="computador">
+        
+        <section id="barra_de_cima">
+            <img src="imgs/logo.png" alt="dads" id="logo">
+            <a href="inicio.html" class="guia" id="inicio_nome">INICIO</a>
+            <a href="solos.html" class="guia">SOLOS</a>
+            <a href="compostagem.html" class="guia">GAMES</a>
+            <a class="guia" id="simulador_nome" href="simulador.html">SIMULADOR</a>
+        </section>
+
+
+        <section id="centro">
+            <img src="imgs/compostagem.png" alt="das" id="imagem">
+            <h1 id="texto">CASCA DE BANANA</h1>
+            <p id="subtitulo">As cascas de frutas, como banana, maçã e laranja, são ricas em potássio e outros nutrientes. Quando compostadas, elas ajudam a melhorar a fertilidade do solo, fornecendo minerais essenciais para o crescimento saudável das plantas.</p>
+
+            <!-- bolinhas -->
+            <section id="bolinhas">
+                <h1 id="bola1" class="bolinha" onclick="trocar(1)"></h1>
+                <h1 id="bola2" class="bolinha" onclick="trocar(2)"></h1>
+                <h1 id="bola3" class="bolinha" onclick="trocar(3)"></h1>
+                <h1 id="bola4" class="bolinha" onclick="trocar(4)"></h1>
+            </section>
+        </section>
+
+    </section>
+
+</body>
+<script>
+    function trocar(s){
+        var texto=
+        ['As cascas de frutas, como banana, maçã e laranja, são ricas em potássio e outros nutrientes. Quando compostadas, elas ajudam a melhorar a fertilidade do solo, fornecendo minerais essenciais para o crescimento saudável das plantas.',
+        'Talos, folhas e cascas de vegetais, como cenoura e batata, são ótimos para o composto, pois são ricos em fibras e nutrientes. Esses restos ajudam a fornecer nitrogênio ao solo, melhorando a estrutura e a qualidade da terra.',
+        'As borras de café são ricas em nitrogênio, um nutriente importante para o crescimento das plantas. Além disso, elas ajudam a melhorar a estrutura do solo, tornando-o mais solto e com melhor capacidade de retenção de água.',
+        'As cascas de ovo são compostas principalmente de cálcio, um nutriente que ajuda a fortalecer as plantas e neutralizar a acidez do solo. É importante quebrá-las em pedaços pequenos antes de colocar na composteira para facilitar a decomposição.'
+        ]
+        var titulos=['CASCA DE FRUTAS','RESTOS DE VEGETAIS','BORRAS DE CAFÉ','CASCAS DE OVO']
+        document.getElementById('texto').innerText=titulos[s-1]
+        document.getElementById('subtitulo').innerText=texto[s-1]
+        for (c=1;c!=5;c++){
+            var bola = document.getElementById(`bola${c}`)
+            if(c==s){
+            bola.style.backgroundColor='#245a1e'
+            }else{
+                bola.style.backgroundColor='transparent'
+            }
+        }
+    }
+</script>
+</html>
