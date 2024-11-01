@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#barra_de_cima{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 6vh;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    color: black;
+}
+.guia{
+    text-align: center;
+    font-size: 1vw;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+.guia:hover{
+    color: #008205;
+    text-decoration:underline;
+    transition: color 0.3s;
+}
+#logo{
+    margin-left: 60vw;
+
+}
+
+
+body{
+    border: none;
+    margin: 0px;
+}
+#fundo{
+    width: 100vh;
+    height: 100vh;
+    position: absolute;
+}
+.textos{
+    color: white;
+    position: absolute;
+    top:  40vh;
+    left: 10vh;
+}
+#dias{
+    font-size: 6.5vw;
+    position: absolute;
+    top: 15vh;
+    left: 4vw;
+}
+#n_dias{
+    position: absolute;
+    top: 45vh;
+    left: 8vw;
+    font-size: 5vw;
+    width: 9vw;
+    height: 5vw;
+    color: white;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    text-align: center;
+}
+#bt{
+    width: 9vw;
+    height: 3vh;
+    border-radius: 2vw;
+    position: absolute;
+    top: 60vh;
+    left: 7.5vw;
+    border: none;
+    color: #245a1e;
+    font-size: 1vw;
+    transition: background-color 0.03s;
+}
+#bt:active{
+    background-color: rgb(249, 225, 195);
+}
+
+/* boa */
+#circle_boa {
+    margin: 0pc;
+    display: inline-block;
+    width: 13vw;
+    height: 13vw;
+    background: conic-gradient(#4CAF50 0% 100%, transparent 100% 100%); /* 75% preenchido */
+    border-radius: 50%; /* Torna o elemento redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 0.3vw black;
+    transition: background 0.5s;
+
+}
+
+#circle-inner_boa{
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle-percentage_boa{
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+
+/* media */
+#circle_media {
+    margin: 0px;
+    display: inline-block;
+    width: 13vw;
+    height: 13vw;
+    background: conic-gradient(#4CAF50 0% 100%, #ddd 100% 100%); /* 75% preenchido */
+    border-radius: 50%; /* Torna o elemento redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 0.3vw black;
+    transition: background 0.5s;
+
+}
+
+#circle-inner_media {
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle-percentage_media{
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+#circle-percentage_media,#circle-percentage_boa,#circle-percentage_ruim{
+    font-size: 2vw;
+}
+/* ruim */
+#circle_ruim{
+    display: inline-block;
+    width: 13vw;
+    height: 13vw;
+    background: conic-gradient(#4CAF50 0% 100%, #ddd 100% 100%); /* 75% preenchido */
+    border-radius: 50%; /* Torna o elemento redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 0.3vw black;
+    transition: background 0.5s;
+
+
+}
+
+#circle-inner_ruim {
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle-percentage_ruim {
+    color: #4CAF50;
+    font-weight: bold;
+}
+#textos{
+    font-size: 3vh;
+    color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    text-shadow: 0px 0px 0.1vw black;
+}
+
+#grafico{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 40vh;
+    left: 41vw;
+    gap: 4vw;
+  
+}
+#textos{
+    display: flex;
+    flex-direction:row;
+    gap: 8.5vw;
+    position: absolute;
+    top: 30vh;
+    left: 43vw;
+    margin: 0pc;
+}

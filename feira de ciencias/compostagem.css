@@ -1,9 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* mobile */
-@media (max-width: 1025px){
+@media (max-width: 1024px){
     body{
-    background-color: aqua;
+    background-color: #4c7d59;
+    margin: 0pc;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow:black 0px 0px 0.5vw;
     }
+    #computador{
+        display: none;
+    }
+    #texto1{
+        width: 60vw;
+        font-size: 4vh;
+        position: absolute;
+        top: 20vh;
+        left:10vw;
+        margin: 0pc;
+        color:#ffefca ;
+    }
+    #subtitulo1{
+        width: 80vw;
+        position: absolute;
+        top: 30vh;
+        left: 10vw;
+        font-size: 3vh;
+        margin: 0px;
+        color: white;
+    }
+    #bolinhas{
+        margin: 0pc;
+        display: flex;
+        flex-direction: row;
+        margin-top: 72vh;
+        margin-left: 5vw;
+    }
+    .bolinha{
+        box-shadow: black 0pc 2px 1vw;
+        margin-left: 5vw;
+        width: 4vw;
+        height:4vw;
+        background-color: transparent;
+        border: 0.50vw white solid;
+        border-radius: 100%;
+    }
+    .bolinha:hover{
+        background-color: white;
+        cursor: pointer;
+
+    }
+    #bola11{
+        background-color: white;
+    }
+    #logo{
+        width: 12vw;
+        height: 12vw;
+
+    }
+    #cima{
+        display: flex;
+        flex-direction: row;
+        font-size: 2.5vw;
+        color: white;
+        margin: 0pc;
+    }
+    .log,#logo_cima{
+        margin: auto;
+        color: white;
+        text-decoration: none;
+    }
+    .log:hover{
+        text-decoration:underline;
+    }
+
 }
 /* computador */
 @media (min-width: 1025px){
@@ -16,11 +89,13 @@
         border: none;
     }
     /* barra de cima */
-
+    #mobile{
+        display: none;
+    }
     #barra_de_cima{
         display: flex;
         flex-direction: row;
-        width: 99vw;
+        width: 100vw;
         height: 6vh;
         background-color: white;
         text-align: center;
@@ -42,8 +117,7 @@
         transition: color 0.3s;
     }
     #logo{
-        margin-left: 70vw;
-
+        margin-left: 60vw;
     }
 
     /* parte de baixo */
@@ -55,14 +129,14 @@
         top: 15vh;
         left: 4vw;
     }
-    #texto{
+    #texto2{
         color: #245a1e;
         font-size: 3vw;
         position: absolute;
         top: 25vh;
         left: 40vw;
     }
-    #subtitulo{
+    #subtitulo2{
         width: 55vw;
         font-size: 2vw;
         position: absolute;
@@ -84,7 +158,7 @@
     .bolinha:hover{
         cursor: pointer;
     }
-    #bola1{
+    #bola12{
         background-color: #245a1e;
     }
     #bolinhas{

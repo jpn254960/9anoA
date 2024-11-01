@@ -4,49 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>simulador</title>
+    <link rel="stylesheet" href="simulador.css">
 </head>
 <body>
-    <section id="computador">
-        <section id="parte_cima">
-            <h1 id="text_dias">dias</h1>
-            <input type="number" name="" id="dias" value="0">
-            <input type="button" value="iniciar" onclick="simular()">
+
+    <section id="barra_de_cima">
+        <img src="imgs/logo.png" alt="dads" id="logo">
+        <a href="inicio.html" class="guia" id="inicio_nome">INICIO</a>
+        <a href="importancia.html" class="guia">IMPORTANCIA</a>
+        <a href="compostagem.html" class="guia">COMPOSTAGEM</a>
+        <a class="guia" id="simulador_nome" href="solos.html">SOLOS</a>
+        <a href="simulador.html" class="guia">SIMULADOR</a>
+    </section>
+
+    <section id="centro">
+        <img src="imgs/fundo_saude.png" alt="" id='fundo'>
+        <h1 id="dias" class="textos">DIAS</h1>
+        <input type="number" name="" class="textos" id="n_dias" value="0" >
+        <input type="button" id="bt" value="simular" onclick="simular_computador()">
+    </section>
+
+    <section id="porgentagens">
+        <section id="grafico">
+        <div id="circle_boa">
+            <div id="circle-inner_boa">
+                <div id="circle-progress_boa"></div>
+                <div id="circle-percentage_boa">100%</div>
+            </div>
+        </div>
+
+        
+            <div id="circle_media">
+                <div id="circle-inner_media">
+                    <div id="circle-progress_media"></div>
+                    <div id="circle-percentage_media">100%</div>
+                </div>
+            </div>
+
+        
+            <div id="circle_ruim">
+                <div id="circle-inner_ruim">
+                    <div id="circle-progress_ruim"></div>
+                    <div id="circle-percentage_ruim">100%</div>
+                </div>
+            </div>
+            
+       
         </section>
-        <!-- situação boa -->
-        <section id="boa">
-            <h1>boa</h1>
-            <section id="saude">
-                <h1 id="text_saude">saude</h1>
-                <h1 id="por100_saudeb">100%</h1>
-            </section>
-        </section>
-        <!-- situação media-->
-        <section id="media">
-            <h1>media</h1>
-            <section id="saude">
-                <h1 id="text_saude">saude</h1>
-                <h1 id="por100_saudem">100%</h1>
-            </section>
-        </section>
-        <!-- situação ruim -->
-        <section id="ruim">
-            <h1>ruim</h1>
-            <section id="saude">
-                <h1 id="text_saude">saude</h1>
-                <h1 id="por100_sauder">100%</h1>
-            </section>
+        <section id="textos">
+            <h1 id="texto_boa">solo ruim</h1>
+            <h1 id="texto_boa">solo medio</h1>
+            <h1 id="texto_boa">solo bom</h1>
         </section>
     </section>
 </body>
+
 <script>
-    function simular(){
-        var dias= document.getElementById('dias').value
-        var v=[[document.getElementById('por100_saudeb'),document.getElementById('por100_saudem'),document.getElementById('por100_sauder')],[100,100,100],[1.05,0.93,0.85]]
-        for (c=0;c!=dias;c++){
-            for (s=0;s!=3;s++){
-                v[0][s].innerText=`${parseInt(v[1][s]*=v[2][s])}`
+    function simular_computador(){
+        var dia=document.getElementById('n_dias').value
+        var circulos=[document.getElementById('circle_boa'),document.getElementById('circle_media'),document.getElementById('circle_ruim')]
+        var textos=[document.getElementById('circle-percentage_boa'),document.getElementById('circle-percentage_media'),document.getElementById('circle-percentage_ruim')]
+        var porgentagens=[100*(1.0+(dia*0.05)),100*(1-(dia*0.07)),100*(1-(dia*0.15))]
+        var color1=''
+        var color2=''
+
+
+        for (c=0;c!=3;c++){
+            if (porgentagens[c]>100){
+                color2='#38b6ff'
+                color1='#004aad'
+            }else if(porgentagens[c]>=50){
+                color2='#f1a270'
+                color1='#ff8131'
+            }else if(porgentagens[c]<50){
+                color2='#ff5d4d'
+                color1='#ff0f00'
             }
+            circulos[c].style.background=`conic-gradient(${color1} 0% ${porgentagens[c]}%, ${color2} ${porgentagens[c]}% 100%)`
+            textos[c].innerText=`${parseInt((porgentagens[c]))}`
         }
-    }
+}
 </script>
+
+
 </html>

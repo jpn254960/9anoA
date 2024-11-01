@@ -62,7 +62,7 @@
         position: absolute;
         top: 64vh;
         left: 8vw;
-        text-shadow:black 0px 0px 1vw;
+        text-shadow:black 0px 0px 0.5vw;
         
     }
     #intuito_mobile{
@@ -71,17 +71,16 @@
         position: absolute;
         top: 64vh;
         left: 48vw;
-        text-shadow:black 0px 0px 1vw;
+        text-shadow:black 0px 0px 0.5vw;
     }
     #logo{
         width: 12vw;
         height: 12vw;
-
     }
     #cima{
         display: flex;
         flex-direction: row;
-        font-size: 3vw;
+        font-size: 2.5vw;
         color: white;
         margin: 0pc;
     }
@@ -107,6 +106,7 @@
         font-optical-sizing: auto;
         font-weight: 600;
         font-style: normal;
+        cursor: default;
     }
     #mobile{
         display: none;
@@ -116,7 +116,7 @@
     #barra_de_cima{
         display: flex;
         flex-direction: row;
-        width: 99vw;
+        width: 100vw;
         height: 6vh;
         background-color: white;
         text-align: center;
@@ -124,6 +124,7 @@
         position: fixed;
         top: 0px;
         color: black;
+    
     }
     .guia{
         text-align: center;
@@ -138,8 +139,7 @@
         transition: color 0.3s;
     }
     #logo{
-        margin-left: 70vw;
-
+        margin-left: 60vw;
     }
 
     /* parte central */
